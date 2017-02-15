@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tab Demo</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>	
+</head>
+<style type="text/css">
+	.portrait{
+		content: url(Full_Portrait_Henry.png);
+		width: 500px;
+		height: auto;
+	}
+	.attack{
+		content: url(Full_Attack_Henry.png);
+		width: 500px;
+		height: auto;		
+	}
+	.special{
+		content: url(Full_Special_Henry.png);
+		width: 500px;
+		height: auto;
+	}
+	.injured{
+		content: url(Full_Injured_Henry.png);
+		width: 500px;
+		height: auto;
+	}
+</style>
+<body>
+<h1>Henry</h1>
+<button  class = "btn-primary" id ="portraitClick">Portrait</button>
+<button  class = "btn-primary" id ="attackClick">Attack</button>
+<button  class = "btn-primary" id ="specialClick">Special</button>
+<button  class = "btn-primary" id ="injuredClick">Injured</button>
+<img id="picture">
+</body>
+<script type="text/javascript">
+var name = $("h1").text()
+  $("#portraitClick").on("click", function() {
+    let picture = $("#picture");
+    picture.attr("style", "content:url(Full_Portrait_"+name+".png); width:500px; height:auto;")
+  });
+  $("#attackClick").on("click", function() {
+    let picture = $("#picture");
+    picture.attr("style", "content:url(Full_Attack_"+name+".png); width:500px; height:auto;")
+  });
+  $("#specialClick").on("click", function() {
+    let picture = $("#picture");
+    picture.attr("style", "content:url(Full_Special_"+name+".png); width:500px; height:auto;")
+  });
+  $("#injuredClick").on("click", function() {
+    let picture = $("#picture");
+    picture.attr("style", "content:url(Full_Injured_"+name+".png); width:500px; height:auto;")
+  });
+</script>
+</html>
