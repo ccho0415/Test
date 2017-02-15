@@ -71,17 +71,28 @@
 	color: #007299;
 	box-shadow: none;
 }
+div{
+	display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
 </style>
 <body>
 <h1>Henry</h1>
+<div style="width: 500px; height: auto; align-content: center">
 <button  class = "btn-primary gradient" id ="portraitClick">Portrait</button>
 <button  class = "btn-primary round" id ="attackClick">Attack</button>
 <button  class = "btn-primary raised" id ="specialClick">Special</button>
-<button  class = "btn btn-primary outline" id ="injuredClick">Injured</button>
+<button  class = "btn btn-primary outline" id ="injuredClick">Injured</button>	
+</div>
+<br>
+<div style="width: 500px; height: auto; align-content: center">
 <img id="portrait">
 <img id="attack">
 <img id="special">
 <img id="injured">
+</div>
+
 </body>
 <script type="text/javascript">
 $(document).ready(function() {
