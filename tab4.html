@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {font-family: "Lato", sans-serif;}
+
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #336c9e;
+}
+
+/* Float the list items side by side */
+ul.tab li {float: left;}
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {
+    background-color: #4c80ae;
+}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {
+    background-color: #1B4E7A;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+div{
+  width: 500px;
+  height: auto;
+}
+ul{
+  width: 524px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center 
+}
+li{
+
+}
+</style>
+<body>
+
+<h1>Henry</h1>
+
+<ul class="tab">
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openPic(event, 'Portrait')" id="defaultOpen">Portrait</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openPic(event, 'Attack')">Attack</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openPic(event, 'Special')">Special</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openPic(event, 'Injured')">Injured</a></li>
+</ul>
+
+<div id="Portrait" class="tabcontent">
+<img src="Full_Portrait_Henry.png" style ="width:500px; height:auto;">
+</div>
+
+<div id="Attack" class="tabcontent">
+<img src="Full_Attack_Henry.png" style ="width:500px; height:auto;">
+</div>
+
+<div id="Special" class="tabcontent">
+<img src="Full_Special_Henry.png" style ="width:500px; height:auto;">
+</div>
+<div id="Injured" class="tabcontent">
+<img src="Full_Injured_Henry.png" style ="width:500px; height:auto;">
+</div>
+<script>
+function openPic(evt, state) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(state).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+     
+</body>
+</html>
+
